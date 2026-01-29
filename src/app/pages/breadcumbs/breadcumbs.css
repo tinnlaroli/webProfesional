@@ -1,0 +1,207 @@
+/* Swiss Style - Breadcrumbs Enhanced */
+
+.swiss-page {
+  min-height: 100vh;
+  background: var(--swiss-white, #FFFFFF);
+  padding: var(--space-2xl) 0; /* 64px vertical */
+}
+
+/* Breadcrumb Navigation - Optimized Spacing */
+.breadcrumb-swiss {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm); /* 16px horizontal spacing */
+  padding: var(--space-xl) 0 var(--space-lg) 0; /* 48px top, 32px bottom */
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-xl); /* 48px from header */
+  margin-bottom: var(--space-lg); /* 32px before title */
+}
+
+.breadcrumb-item {
+  color: var(--swiss-gray, #666666); /* WCAG AA: 5.74:1 contrast */
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.breadcrumb-item:hover {
+  color: var(--swiss-black, #000000);
+}
+
+.breadcrumb-item.active {
+  color: var(--swiss-black, #000000);
+  font-weight: 600;
+  border-bottom: 2px solid var(--swiss-accent, #FF0000);
+}
+
+.separator {
+  color: var(--swiss-gray-light, #CCCCCC);
+  font-weight: 300;
+  font-size: 10px;
+}
+
+/* Page Title - Enhanced for Viewport Authority */
+.page-title h1 {
+  font-size: clamp(3rem, 8vw, 5rem); /* Responsive: 48-80px */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--rhythm-title-to-text); /* 24px to subtitle */
+}
+
+/* Large viewport enhancement */
+@media (min-width: 1440px) {
+  .page-title h1 {
+    font-size: clamp(5rem, 6vw, 6.5rem); /* 80-104px for authority */
+  }
+}
+
+.intro-text {
+  font-size: 16px;
+  color: var(--swiss-gray, #999999);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: var(--space-2xl); /* 64px before divider */
+}
+
+/* Definition Block */
+.definition-block {
+  background: var(--swiss-black, #000000);
+  color: var(--swiss-white, #FFFFFF);
+  padding: var(--space-2xl); /* 64px */
+  border-left: 4px solid var(--swiss-accent, #FF0000);
+}
+
+.def-bread {
+  color: var(--swiss-white, #FFFFFF);
+}
+
+.definition-block h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.definition-block p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Types Section */
+.types-section h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2xl); /* 64px */
+  text-transform: uppercase;
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl); /* 48px */
+  margin-bottom: var(--space-2xl); /* 64px */
+}
+
+.type-item {
+  background: var(--swiss-white, #FFFFFF);
+  border: 2px solid var(--swiss-black, #000000);
+  padding: var(--space-xl); /* 48px */
+  position: relative;
+}
+
+.type-number {
+  position: absolute;
+  top: -15px;
+  left: 3rem;
+  background: var(--swiss-accent, #FF0000);
+  color: var(--swiss-white, #FFFFFF);
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.type-item h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.type-item p {
+  margin-bottom: 2rem;
+  color: var(--swiss-gray, #999999);
+  font-size: 14px;
+}
+
+.example-box {
+  background: var(--swiss-black, #000000);
+  padding: 1.5rem;
+  border-left: 3px solid var(--swiss-accent, #FF0000);
+}
+
+.example-box code {
+  color: var(--swiss-white, #FFFFFF);
+  background: transparent;
+  font-size: 14px;
+  padding: 0;
+}
+
+/* Practices Section */
+.practices-section h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2xl); /* 64px */
+  text-transform: uppercase;
+}
+
+.practice-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg); /* 32px */
+}
+
+.practice-item {
+  border: 1px solid var(--swiss-black, #000000);
+  padding: var(--space-xl); /* 48px */
+}
+
+.practice-item h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  color: var(--swiss-accent, #FF0000);
+  text-transform: uppercase;
+}
+
+.practice-item p {
+  line-height: 1.8;
+  color: var(--swiss-gray, #999999);
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title h1 {
+    font-size: 3rem;
+  }
+
+  .types-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .breadcrumb-swiss {
+    flex-wrap: wrap;
+  }
+}

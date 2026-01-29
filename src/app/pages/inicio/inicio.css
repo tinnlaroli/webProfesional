@@ -1,0 +1,281 @@
+/* Swiss Style - Inicio Component (Breadcrumbs Gold Standard) */
+
+.swiss-inicio {
+  position: relative;
+  min-height: 100vh;
+  background: var(--swiss-white, #FFFFFF);
+}
+
+.geometric-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.content-overlay {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-2xl) var(--space-2xl); /* 64px - matches Breadcrumbs */
+}
+
+/* Breadcrumb Navigation - Exact match from Breadcrumbs */
+.breadcrumb-swiss {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm); /* 16px horizontal spacing */
+  padding: var(--space-xl) 0 var(--space-lg) 0; /* 48px top, 32px bottom */
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-top: var(--space-xl); /* 48px from header */
+  margin-bottom: var(--space-lg); /* 32px before title */
+}
+
+.breadcrumb-item {
+  color: var(--swiss-gray, #666666); /* WCAG AA: 5.74:1 contrast */
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.breadcrumb-item:hover {
+  color: var(--swiss-black, #000000);
+}
+
+.breadcrumb-item.active {
+  color: var(--swiss-black, #000000);
+  font-weight: 600;
+  border-bottom: 2px solid var(--swiss-accent, #FF0000);
+}
+
+.separator {
+  color: var(--swiss-gray-light, #CCCCCC);
+  font-weight: 300;
+  font-size: 10px;
+}
+
+/* Hero Section */
+.hero-swiss {
+  margin-bottom: var(--space-2xl); /* 64px - matches Breadcrumbs */
+}
+
+.title-swiss {
+  font-size: clamp(3rem, 8vw, 5rem); /* Responsive: 48-80px */
+  font-weight: 800; /* Matches Breadcrumbs */
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--rhythm-title-to-text); /* 24px */
+  text-align: left;
+  color: var(--swiss-black, #000000);
+}
+
+.subtitle-swiss {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: left;
+  color: var(--swiss-gray-medium, #999999);
+  max-width: 600px;
+}
+
+/* Technical Section */
+.technical-section {
+  margin-bottom: var(--space-2xl); /* 64px */
+}
+
+.technical-section h2 {
+  font-size: 1.5rem; /* Matches Breadcrumbs section headers */
+  font-weight: 800; /* Matches Breadcrumbs */
+  margin-bottom: var(--space-2xl); /* 64px */
+  text-align: left;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--swiss-accent, #FF0000);
+  padding-bottom: var(--space-sm); /* 16px */
+}
+
+.flow-swiss {
+  margin-bottom: var(--space-2xl); /* 64px */
+}
+
+.flow-swiss h3 {
+  font-size: 1.25rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  margin-bottom: var(--space-lg); /* 32px */
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.flow-items {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg); /* 32px */
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  background: var(--swiss-white, #FFFFFF);
+  border: 2px solid var(--swiss-black, #000000);
+  padding: var(--space-lg); /* 32px */
+  position: relative;
+  min-width: 150px;
+}
+
+.step-num {
+  position: absolute;
+  top: -12px;
+  left: 1rem;
+  background: var(--swiss-accent, #FF0000);
+  color: var(--swiss-white, #FFFFFF);
+  padding: 0.25rem 0.75rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.flow-step code {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--swiss-black, #000000);
+  padding: 0;
+}
+
+.flow-arrow {
+  font-size: 2rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  color: var(--swiss-accent, #FF0000);
+}
+
+/* Concepts */
+.concepts-swiss {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg); /* 32px */
+  margin-bottom: var(--space-2xl); /* 64px */
+}
+
+.concept-block {
+  background: var(--swiss-white, #FFFFFF);
+  border: 1px solid var(--swiss-black, #000000);
+  padding: var(--space-xl); /* 48px - matches Breadcrumbs */
+}
+
+.concept-block h3 {
+  font-size: 1.25rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  margin-bottom: 1.5rem;
+  text-align: left;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.concept-block p {
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: left;
+  color: var(--swiss-gray-medium, #999999);
+}
+
+/* Commands Section */
+.commands-section {
+  margin-bottom: var(--space-2xl); /* 64px */
+}
+
+.commands-section h2 {
+  font-size: 1.5rem; /* Matches Breadcrumbs */
+  font-weight: 800; /* Matches Breadcrumbs */
+  margin-bottom: var(--space-lg); /* 32px */
+  text-align: left;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--swiss-accent, #FF0000);
+  padding-bottom: var(--space-sm); /* 16px */
+}
+
+.command-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg); /* 32px */
+}
+
+.command-block {
+  background: var(--swiss-black, #000000);
+  color: var(--swiss-white, #FFFFFF);
+  padding: var(--space-xl); /* 48px - matches Breadcrumbs */
+  border-left: 4px solid var(--swiss-accent, #FF0000);
+}
+
+.command-block code {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background: transparent;
+  color: var(--swiss-white, #FFFFFF);
+  padding: 0;
+  font-family: 'Courier New', monospace;
+}
+
+.command-block p {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Quote */
+.quote-swiss {
+  text-align: left;
+  padding: var(--space-2xl) 0; /* 64px */
+}
+
+.quote-swiss p {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--swiss-black, #000000);
+  border-left: 4px solid var(--swiss-accent, #FF0000);
+  padding-left: var(--space-lg); /* 32px */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-overlay {
+    padding: var(--space-lg); /* 32px */
+  }
+
+  .title-swiss {
+    font-size: 2.5rem;
+  }
+
+  .subtitle-swiss {
+    font-size: 1.125rem;
+  }
+
+  .flow-items {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .concepts-swiss {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-swiss p {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,80 @@
+<div class="search-swiss">
+  <div class="swiss-grid-container show-grid">
+    
+    <!-- Search Input -->
+    <div class="search-header col-12">
+      <h1>BÚSQUEDA</h1>
+    </div>
+
+    <div class="search-input-wrapper col-8">
+      <input 
+        type="text" 
+        class="search-input-line"
+        placeholder="BUSCAR..."
+        [(ngModel)]="query"
+        (keyup.enter)="doSearch()"
+      />
+      <div class="search-actions">
+        <button class="btn-search" (click)="doSearch()">BUSCAR</button>
+        <button class="btn-clear" (click)="clear()">LIMPIAR</button>
+      </div>
+    </div>
+
+    <!-- Advanced Filters -->
+    <div class="filters-section col-12">
+      <h3>FILTROS AVANZADOS</h3>
+      
+      <div class="filters-grid">
+        <div class="filter-group">
+          <label>TIPO</label>
+          <select class="filter-select" [(ngModel)]="filters.type" (change)="doSearch()">
+            <option value="todos">TODOS</option>
+            <option value="pagina">PÁGINA</option>
+            <option value="seccion">SECCIÓN</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>SECCIÓN/TEMA</label>
+          <select class="filter-select" [(ngModel)]="filters.section" (change)="doSearch()">
+            <option value="todas">TODAS</option>
+            <option *ngFor="let s of sections" [value]="s">{{ s | uppercase }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Spacer -->
+    <div class="search-results-spacer col-12"></div>
+
+    <!-- Results -->
+    <div class="search-results col-12">
+      <ng-container *ngIf="results$ | async as results">
+        <div *ngIf="results.length === 0" class="no-results">
+          <p>NO SE ENCONTRARON RESULTADOS</p>
+        </div>
+
+        <div *ngIf="results.length > 0" class="results-list">
+          <div class="results-count">
+            <span class="count-number">{{ results.length }}</span>
+            <span class="count-label">RESULTADOS</span>
+          </div>
+
+          <a 
+            *ngFor="let item of results; let i = index" 
+            class="result-item reveal-element" 
+            [routerLink]="item.path"
+          >
+            <div class="result-number">{{ (i + 1).toString().padStart(2, '0') }}</div>
+            <div class="result-content">
+              <h3 class="result-title">{{ item.title | uppercase }}</h3>
+              <p class="result-description">{{ item.description }}</p>
+              <span class="result-section">{{ item.section | uppercase }}</span>
+            </div>
+          </a>
+        </div>
+      </ng-container>
+    </div>
+
+  </div>
+</div>

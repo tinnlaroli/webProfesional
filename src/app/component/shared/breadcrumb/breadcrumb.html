@@ -1,0 +1,56 @@
+<!-- Contenedor principal de navegación -->
+<!-- aria-label="breadcrumb" mejora la accesibilidad indicando qué es esta sección -->
+<nav class="breadcrumb" aria-label="breadcrumb">
+
+<!-- Itera sobre cada 'crumb' (miga) en la lista 'crumbs' de component.ts -->
+<!-- 'let last = last' es una variable local que es true si es el último elemento -->
+<!-- 'let first = first' es true si es el primer elemento -->
+<ng-container *ngFor="let crumb of crumbs; let last = last; let first = first">
+
+    <!-- Si NO es el último elemento, mostramos un enlace cliqueable -->
+    <!-- [routerLink] asigna la URL de destino -->
+    <!--
+    Componente de Migaja de Pan (Breadcrumb)
+
+    Este fragmento de código genera un elemento de navegación de migajas de pan que permite
+    a los usuarios navegar por la estructura jerárquica del sitio.
+
+    Características:
+    - Muestra un icono de "home" en la primera migaja de pan
+    - Muestra el nombre de la etiqueta (label) en las migajas posteriores
+    - Solo renderiza el enlace si no es el último elemento de la ruta actual
+    - Utiliza enrutamiento de Angular para la navegación
+
+    Notas sobre deprecación:
+    - *ngIf está deprecado en versiones recientes de Angular
+    - Considere migrar a la nueva sintaxis de control de flujo (@if)
+
+    Ejemplo de migración moderna:
+    @if (!last) {
+        <a [routerLink]="crumb.url">
+            @if (first) {
+                <mat-icon>home</mat-icon>
+            }
+            @if (!first) {
+                <span>{{ crumb.label }}</span>
+            }
+        </a>
+    }
+    -->
+    <a *ngIf="!last" [routerLink]="crumb.url">
+
+    <mat-icon *ngIf="first">home</mat-icon>
+    <span *ngIf="!first">{{ crumb.label }}</span>
+    </a>
+
+    <!-- Si ES el último elemento, mostramos solo texto (página actual) -->
+    <!-- Usamos una clase diferente para estilarlo distinto -->
+    <span *ngIf="last" class="current">
+    {{ crumb.label }}
+    </span>
+
+    <!-- Separador visual entre elementos (/) -->
+    <!-- Solo se muestra si NO es el último elemento -->
+    <span *ngIf="!last" class="separator">/</span>
+</ng-container>
+</nav>

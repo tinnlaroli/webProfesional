@@ -1,0 +1,112 @@
+/* Swiss Style - Menu (Breadcrumbs Gold Standard) */
+
+.typologies-section h2 {
+  font-size: 1.5rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2xl); /* 64px */
+  text-transform: uppercase;
+}
+
+.typologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-xl); /* 48px */
+  margin-bottom: var(--space-2xl); /* 64px */
+}
+
+.menu-card {
+  background: var(--swiss-white, #FFFFFF);
+  border: 2px solid var(--swiss-black, #000000);
+  padding: var(--space-xl); /* 48px - matches Breadcrumbs */
+}
+
+.card-label {
+  display: inline-block;
+  background: var(--swiss-black, #000000);
+  color: var(--swiss-white, #FFFFFF);
+  padding: 0.5rem 1.5rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.card-label.accent {
+  background: var(--swiss-accent, #FF0000);
+}
+
+.menu-card h3 {
+  font-size: 1.75rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.menu-card p {
+  line-height: 1.8;
+  color: var(--swiss-gray-medium, #999999);
+  font-size: 14px;
+}
+
+.rules-section h2 {
+  font-size: 1.5rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2xl); /* 64px */
+  text-transform: uppercase;
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl); /* 48px */
+}
+
+.rule-block {
+  background: var(--swiss-white, #FFFFFF);
+  border: 2px solid var(--swiss-black, #000000);
+  padding: var(--space-xl); /* 48px - matches Breadcrumbs */
+  position: relative;
+}
+
+.rule-number {
+  position: absolute;
+  top: -15px;
+  left: 3rem;
+  background: var(--swiss-accent, #FF0000);
+  color: var(--swiss-white, #FFFFFF);
+  padding: 0.5rem 1rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.rule-block h3 {
+  font-size: 1.5rem;
+  font-weight: 800; /* Matches Breadcrumbs */
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.rule-principle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--swiss-gray-medium, #999999);
+}
+
+.rule-block p {
+  line-height: 1.8;
+  color: var(--swiss-gray-medium, #999999);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .typologies-grid {
+    grid-template-columns: 1fr;
+  }
+}
