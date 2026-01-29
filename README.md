@@ -489,3 +489,19 @@ Proyecto educativo sobre arquitectura de sitios web con Swiss International Styl
 ## 📄 Licencia
 
 Este proyecto es de código abierto para fines educativos.
+
+
+**Cambios realizados:**
+- `base-href`: `/webProfesional/` (nombre del repo)
+- `path`: `'./dist/sitio-estructura/browser'` (según tu estructura)
+
+**Ruta del archivo:**
+```
+.github/
+  workflows/
+    deploy.yml
+```
+
+Una vez que hagas push, tu sitio estará disponible en:
+```
+https://tinnlaroli.github.io/webProfesional/
