@@ -8,6 +8,22 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Script para recuperar la ruta desde el parámetro enviado por 404.html -->
+  <script>
+    // Este script se ejecuta antes de que Angular se inicialice
+    // Recupera la ruta original que fue capturada por 404.html
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
 </head>
 <body>
   <app-root></app-root>

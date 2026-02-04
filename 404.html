@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redireccionando...</title>
+    <script>
+      // Script para capturar la ruta y redirigir al index.html
+      // GitHub Pages sirve este archivo cuando encuentra un 404
+
+      // Obtener la ruta completa desde la URL actual
+      var pathSegmentsToKeep = 1; // Número de segmentos del path base (generalmente 1 para GitHub Pages)
+
+      var l = window.location;
+
+      // Construir la URL de redirección
+      // Convertimos la ruta en un parámetro de query string que Angular puede leer
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, pathSegmentsToKeep + 1)
+            .join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(pathSegmentsToKeep)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash,
+      );
+    </script>
+  </head>
+  <body>
+    <!-- Mensaje opcional mientras se redirige -->
+    <p>Redireccionando...</p>
+  </body>
+</html>
