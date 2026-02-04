@@ -2,12 +2,12 @@
     <div class="brand">Sitio estructura</div>
 
     <nav class="menu">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
-        <a routerLink="/breadcrumbs" routerLinkActive="active">breadcrumbs</a>
-        <a routerLink="/elementos-sitio" routerLinkActive="active">Elementos</a>
-        <a routerLink="/menu" routerLinkActive="active">Menu</a>
-        <a routerLink="/mapa-sitio" routerLinkActive="active">Mapa del sitio </a>
-        <a routerLink="/busqueda" routerLinkActive="active">Busqueda</a>
+        <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+        <a routerLink="breadcrumbs" routerLinkActive="active">breadcrumbs</a>
+        <a routerLink="elementos-sitio" routerLinkActive="active">Elementos</a>
+        <a routerLink="menu" routerLinkActive="active">Menu</a>
+        <a routerLink="mapa-sitio" routerLinkActive="active">Mapa del sitio </a>
+        <a routerLink="busqueda" routerLinkActive="active">Busqueda</a>
     </nav>
 
     <form class="d-flex ms-3" (submit)="$event.preventDefault(); goSearch()">

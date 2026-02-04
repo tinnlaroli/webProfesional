@@ -16,7 +16,7 @@ export const SITE_INDEX: SiteItem[] = [
     id: 'inicio',
     title: 'Inicio - Arquitectura Web',
     description: 'Fundamentos de Angular: flujo de carga desde main.ts hasta index.html, componentes standalone, selectores y arquitectura de aplicaciones modernas.',
-    path: '/',
+    path: '',
     type: 'pagina',
     section: 'Fundamentos Angular',
     keywords: [
@@ -64,7 +64,7 @@ export const SITE_INDEX: SiteItem[] = [
     id: 'elementos-sitio',
     title: 'Elementos del Sitio',
     description: 'Etiquetas semánticas HTML5: header, main, footer, nav, article, section. Pilares estructurales de la arquitectura web moderna.',
-    path: '/elementos',
+    path: 'elementos-sitio',
     type: 'pagina',
     section: 'Estructura Web',
     keywords: [
@@ -106,7 +106,7 @@ export const SITE_INDEX: SiteItem[] = [
     id: 'breadcrumbs',
     title: 'Breadcrumbs',
     description: 'Rutas de navegación jerárquica inspiradas en Hansel y Gretel. Tipos: jerarquía, ruta y atributos. Implementación con JSON-LD para SEO.',
-    path: '/breadcrumbs',
+    path: 'breadcrumbs',
     type: 'pagina',
     section: 'Navegación',
     keywords: [
@@ -144,7 +144,7 @@ export const SITE_INDEX: SiteItem[] = [
     id: 'mapa-sitio',
     title: 'Mapa del Sitio',
     description: 'Índice jerárquico completo: Sitemap HTML para usuarios y XML para motores de búsqueda. Mejora navegación, indexación y conversiones.',
-    path: '/mapa-sitio',
+    path: 'mapa-sitio',
     type: 'pagina',
     section: 'Estructura Web',
     keywords: [
@@ -181,7 +181,7 @@ export const SITE_INDEX: SiteItem[] = [
     id: 'menu',
     title: 'Menú de Navegación',
     description: 'Tipos de navegación web: lineal, jerárquica y en red. Menú global, desplegables, regla de 3 clics y diseño responsive con hamburguesa.',
-    path: '/menu',
+    path: 'menu',
     type: 'pagina',
     section: 'Navegación',
     keywords: [
@@ -219,7 +219,7 @@ export const SITE_INDEX: SiteItem[] = [
     id: 'busqueda',
     title: 'Búsqueda',
     description: 'Sistema de búsqueda avanzada con filtros por tipo y sección. Indexación de contenido, resultados numerados y experiencia optimizada.',
-    path: '/busqueda',
+    path: 'busqueda',
     type: 'pagina',
     section: 'Búsqueda y Navegación',
     keywords: [
@@ -254,7 +254,7 @@ export const SITE_INDEX: SiteItem[] = [
     id: 'error404',
     title: 'Error 404',
     description: 'Página de error optimizada: mensajes amigables, navegación alternativa y diseño creativo reducen abandono hasta 30%.',
-    path: '/no-existe',
+    path: 'no-existe',
     type: 'seccion',
     section: 'Errores',
     keywords: [

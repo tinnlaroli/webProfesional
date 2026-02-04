@@ -77,14 +77,17 @@ export class Breadcrumb implements OnDestroy {
       'mapa-sitio': 'Mapa del sitio',
     };
 
-    // Inicializa los breadcrumbs siempre con el "Inicio".
-    const breadcrumbs: Crumb[] = [{ label: 'Inicio', url: '/' }];
+    // Inicializa los breadcrumbs siempre con el "Inicio" usando ruta relativa vacía.
+    const breadcrumbs: Crumb[] = [{ label: 'Inicio', url: '' }];
 
-    let currentUrl = '';
+    // Array para construir la ruta acumulativa
+    const pathSegments: string[] = [];
     // Itera sobre cada segmento de la URL.
     for (const segment of segments) {
-      // Reconstruye la URL acumulativa para cada paso.
-      currentUrl += `/${segment}`;
+      // Agrega el segmento actual al array
+      pathSegments.push(segment);
+      // Construye la URL relativa uniendo los segmentos
+      const currentUrl = pathSegments.join('/');
       // Agrega la miga de pan al array.
       breadcrumbs.push({
         // Si el segmento está en el mapa, usa la traducción; si no, lo formatea automáticamente.
